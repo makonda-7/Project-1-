@@ -1,0 +1,152 @@
+#footer {
+	width: 100%;
+	padding: 15px 0;
+	background-color: #191c24;
+	background-repeat: repeat;
+	background-image: url(../images/bg-header.jpg);
+	font-size: 12px;
+	line-height: 2;
+	font-family: $base-font-sans-serif;
+
+	@include media (">=phone") {
+		padding: 20px 15px;
+	}
+
+	@include media (">=tablet") {
+		padding: 33px 40px 40px 50px;
+	}
+}
+
+.footer-wrapper {
+	color: #8e959c;
+	@include media (">=tablet") {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+a {
+	transition: $animation-speed;
+	text-decoration: none;
+
+	&:hover {
+		color: #ff4533;
+		transition: $animation-speed;
+	}
+}
+
+.col-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+
+	@include media (">=tablet") {
+		width: 60%;
+	}
+
+	@include media (">=desktop") {
+		width: 50%;
+	}
+}
+
+.col {
+	width: 50%;
+	margin-bottom: 20px;
+
+	@include media (">=phone") {
+		width: 25%;
+	}
+
+	@include media (">=tablet") {
+		margin-bottom: 0;
+	}
+
+	h5 {
+		color: $white;
+		text-transform: uppercase;
+		padding-bottom: 15px;
+		font-weight: bold;
+		line-height: 1.3;
+		font-family: $base-font-sans-serif;
+
+
+		@include media (">=tablet") {
+			line-height: 2;
+			padding-bottom: 8px;
+		}
+	}
+
+	ul {
+		@extend %listreset;
+	}
+}
+
+.contacts {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	padding-top: 10px;
+
+	@include media (">=tablet") {
+		display: inline-block;
+		vertical-align: middle;
+		padding-top: 0;
+		text-align: right;
+		width: auto;
+	}
+}
+
+.social-networks {
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+	@extend %listreset;
+
+	@include media (">=tablet") {
+		margin-bottom: 40%;
+		text-align: right;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	a {
+		padding: 5px;
+	}
+
+	i {
+		color: $white;
+		font-size: 12px;
+		line-height: 2;
+		transition: color $animation-speed;
+
+		@include media (">=tablet") {
+			font-size: 18px;
+			padding-right: 0;
+		}
+	}
+}
+
+.copyright {
+	display: block;
+
+	p {
+		@extend %listreset;
+	}
+
+	ul {
+		@extend %listreset;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
